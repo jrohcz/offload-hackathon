@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+/*
+  Offload direction (Unslop pass, 31 Oct 2026)
+  Product: one photo becomes an honest listing; the agent filters buyer chat.
+  Character: exact, warm, unsentimental.
+  World: a second-hand shop inspection desk — paper tags, ink, photo evidence.
+  Moments: the photographs themselves carry the colour; the chrome stays quiet.
+  Signature: a red "sold as seen" stamp and red-pencil defect marks.
+*/
+
+:root {
+  --ink: #20241f;
+  --ink-soft: #454a42;
+  --muted: #77705f;
+  --paper: #f3efe3;
+  --surface: #fffdf6;
+  --surface-2: #faf6ea;
+  --line: rgba(32, 36, 31, 0.16);
+  --line-strong: rgba(32, 36, 31, 0.34);
+  --stamp: #b23a26;
+  --stamp-dark: #8f2c1b;
+  --moss: #4c6440;
+  --moss-dark: #3c5032;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, label:focus-within {
+  outline: 2px solid var(--stamp);
+  outline-offset: 2px;
+}
+
+.shell { max-width: 1160px; margin: 0 auto; padding: 28px 24px 72px; }
+
+/* Top bar: a quiet shop sign, not a SaaS nav. */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding-bottom: 16px; margin-bottom: 44px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 1.45rem; letter-spacing: -0.01em;
+}
+.mark {
+  width: 32px; height: 32px; display: grid; place-items: center;
+  background: var(--ink); color: var(--paper);
+  font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 1rem; font-weight: 500;
+  border-radius: 4px; transform: rotate(-3deg);
+}
+.header-right { display: flex; align-items: center; gap: 20px; }
+.metric, .muted { color: var(--muted); font-size: 0.82rem; }
+.metric { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+.nav { color: var(--ink-soft); font-size: 0.9rem; text-decoration: underline; text-underline-offset: 3px; }
+.nav:hover { color: var(--stamp-dark); }
+
+/* Hero: headline on calm paper, the stamp is the one loud detail. */
+.hero { position: relative; max-width: 700px; margin-bottom: 32px; }
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--stamp-dark); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.01em;
+}
+h1 {
+  font-family: Fraunces, Georgia, serif; font-weight: 560;
+  font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 0.98; letter-spacing: -0.02em;
+  margin: 12px 0 16px;
+}
+h2 { font-family: Fraunces, Georgia, serif; font-weight: 560; letter-spacing: -0.01em; margin: 0 0 8px; }
+.lede { font-size: 1.08rem; color: var(--ink-soft); line-height: 1.55; max-width: 560px; }
+.stamp {
+  position: absolute; right: -8px; top: 56px; transform: rotate(5deg);
+  border: 2px solid var(--stamp); color: var(--stamp); border-radius: 4px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px;
+  background: rgba(255, 253, 246, 0.65);
+}
+
+/* Intake desk. */
+.upload {
+  border: 1px solid var(--line-strong); border-top: 4px solid var(--ink);
+  border-radius: 12px; background: var(--surface);
+  padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.upload input { display: block; width: 100%; max-width: 100%; min-height: 44px; padding-block: 8px; }
+.upload-copy { display: grid; gap: 16px; }
+.upload-copy label { display: grid; gap: 4px; cursor: pointer; }
+.upload-copy label + label { border-top: 1px solid var(--line); padding-top: 16px; }
+.upload-copy strong { font-size: 1.05rem; font-weight: 600; }
+.upload-copy span { color: var(--muted); font-size: 0.9rem; }
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.button {
+  border: 1px solid var(--ink); border-radius: 8px; background: var(--ink); color: var(--paper);
+  padding: 10px 16px; min-height: 44px; font-weight: 600;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.button:hover:not(:disabled) { background: #343a33; }
+.button.secondary { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.button.secondary:hover:not(:disabled) { background: var(--surface-2); border-color: var(--ink); }
+.button:disabled { opacity: 0.42; cursor: wait; }
+
+.status { margin: 16px 0; color: var(--ink-soft); min-height: 24px; font-size: 0.95rem; }
+
+/* Evidence cards. */
+.pipeline { display: grid; gap: 20px; margin-top: 32px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  padding: 24px; box-shadow: 4px 4px 0 rgba(32, 36, 31, 0.05);
+}
+.media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.media-grid figure { margin: 0; background: #fff; border: 1px solid var(--line); padding: 8px 8px 4px; }
+.media-grid img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #efead9; display: block; }
+figcaption {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--muted); font-size: 0.74rem; margin-top: 8px;
+}
+
+.listing-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+.facts { display: grid; gap: 16px; align-content: start; }
+.fact-group { display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 12px; }
+.fact-group:first-child { border-top: 0; padding-top: 0; }
+.fact-group h3 {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.74rem; font-weight: 500; letter-spacing: 0.02em; margin: 0; color: var(--muted);
+}
+.fact-group ul { margin: 0; padding-left: 18px; line-height: 1.5; }
+.fact-group strong { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500; font-variant-numeric: tabular-nums; }
+
+/* Condition: the red-pencil moment. */
+.condition { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; border-left: 4px solid var(--stamp); }
+.condition img { width: 100%; border: 1px solid rgba(178, 58, 38, 0.45); display: block; }
+.pill {
+  display: inline-flex; border: 1px solid rgba(178, 58, 38, 0.55); border-radius: 4px;
+  color: var(--stamp-dark); padding: 4px 8px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.74rem; font-weight: 500;
+}
+.approve { width: 100%; margin-top: 16px; background: var(--moss); border-color: var(--moss-dark); color: #fff; }
+.approve:hover:not(:disabled) { background: var(--moss-dark); }
+.voice-result { border-left: 3px solid var(--stamp); margin-top: 16px; padding: 8px 12px; color: var(--ink-soft); background: var(--surface-2); }
+.voice-result p { margin: 4px 0 0; line-height: 1.45; }
+
+/* Agent ledger and decision tags. */
+.agent-card { display: grid; gap: 16px; }
+.simulation { display: grid; gap: 0; counter-reset: persona; }
+.metric-large { color: var(--ink); font-weight: 600; }
+.metric-large::before { content: "— "; color: var(--stamp); }
+.persona { display: grid; gap: 4px; border-top: 1px solid var(--line); padding: 12px 0 4px; font-size: 0.9rem; }
+.persona strong::before {
+  counter-increment: persona; content: counter(persona, decimal-leading-zero) "  ";
+  font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500; color: var(--stamp-dark); font-size: 0.78rem;
+}
+.persona span { color: var(--muted); }
+.persona .agent-reply { color: var(--ink); }
+
+.inbox { display: grid; gap: 12px; }
+.deal-card {
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  border: 1px solid var(--line-strong); border-left: 3px dashed var(--line-strong);
+  border-radius: 8px; padding: 16px 16px 16px 20px; background: var(--surface-2);
+}
+.deal-card > div:first-child { display: grid; gap: 4px; }
+.deal-card span { color: var(--muted); }
+.deal-card small {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; font-size: 0.7rem;
+}
+.status-pending { color: #96660f; } .status-accepted { color: var(--moss-dark); } .status-declined { color: var(--stamp-dark); }
+.deal-card .actions { flex-wrap: nowrap; } .deal-card .button { min-width: 72px; } .deal-card .approve { margin-top: 0; }
+
+/* Debug ledger. */
+.debug-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+.debug-table th, .debug-table td { border-bottom: 1px solid var(--line); text-align: left; padding: 10px 8px; vertical-align: top; }
+.debug-table th { font-family: "IBM Plex Mono", ui-monospace, monospace; color: var(--muted); font-size: 0.72rem; font-weight: 500; }
+.raw { max-width: 420px; white-space: pre-wrap; word-break: break-word; color: var(--muted); font-size: 0.72rem; max-height: 140px; overflow: auto; }
+
+/* Owner answers and Find. */
+.owner-answer { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
+.owner-answer input, .find-form input, .find-offers select, .find-offers textarea {
+  padding: 10px 12px; min-height: 44px;
+  border: 1px solid var(--line-strong); border-radius: 8px; font: inherit; background: #fff; color: var(--ink);
+}
+.owner-answer input:hover, .find-form input:hover, .find-offers select:hover, .find-offers textarea:hover { border-color: var(--ink-soft); }
+.find-card { margin-top: 20px; }
+.find-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0; }
+.find-form .check { display: flex; gap: 6px; align-items: center; min-height: 44px; }
+.find-form .check input { width: 18px; height: 18px; accent-color: var(--moss); }
+.find-offers { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.find-offers textarea { min-height: 72px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+
+@media (max-width: 760px) {
+  .shell { padding: 20px 16px 52px; }
+  .topbar { margin-bottom: 32px; align-items: flex-start; }
+  .header-right { align-items: flex-end; flex-direction: column; gap: 6px; }
+  .stamp { position: static; display: inline-block; transform: rotate(-2deg); margin-top: 16px; }
+  .upload, .listing-grid, .condition { grid-template-columns: 1fr; display: grid; }
+  .media-grid { grid-template-columns: 1fr; }
+  .media-grid img { aspect-ratio: 4 / 3; }
+  .deal-card { align-items: stretch; flex-direction: column; }
+  .deal-card .actions { width: 100%; }
+  .deal-card .button { flex: 1; }
+}
+
+/* Keep native upload controls keyboard-accessible and form labels visible. */
+.upload-copy, .upload-copy label, .field-label, .listing-grid > div { min-width: 0; }
+.field-label { display: flex; flex-direction: column; gap: 6px; }
+.field-label > span { font-size: 0.9rem; color: var(--ink-soft); }
+.find-form { align-items: end; }
+.find-form .field-label { flex: 1 1 220px; }
+.find-form .field-label input { width: 100%; }
+.mode-label { font-size: 0.78rem; color: var(--ink-soft); }
+.status button { margin-inline-start: 12px; }
+.card, .upload-copy, .status, .deal-card { overflow-wrap: anywhere; }
+input::file-selector-button { min-height: 36px; margin-inline-end: 8px; padding: 4px 10px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface-2); color: var(--ink); font: inherit; cursor: pointer; }
+@media (max-width: 760px) { .find-form .field-label { flex-basis: 100%; } .mode-label { max-width: 170px; text-align: right; } }

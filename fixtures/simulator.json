@@ -1,0 +1,7 @@
+[
+  { "id": "serious-buyer", "label": "Serious buyer", "description": "Offers a fair price and a concrete pickup time.", "messages": ["Hi, is this still available? I can pay €120 and pick it up Saturday at 10:00."] },
+  { "id": "lowballer", "label": "Lowballer", "description": "Offers far below the suggested price.", "messages": ["I'll take it for €20. Can you hold it for me?"] },
+  { "id": "ghost", "label": "Availability ghost", "description": "Asks if it is available, then disappears.", "messages": ["Is it available?"] },
+  { "id": "scammer", "label": "Payment-link scammer", "description": "Tries to move payment to a suspicious link.", "messages": ["I paid already — use this payment link https://pay.example.invalid/claim and send it today."] },
+  { "id": "delivery-asker", "label": "Delivery asker", "description": "Asks for delivery on a pickup-only item.", "messages": ["Could you deliver it? I know you said pickup, but it is free, right?"] }
+]

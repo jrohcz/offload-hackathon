@@ -1,0 +1,45 @@
+{
+  "result": "PASS",
+  "url": "https://offload-eta.vercel.app",
+  "video": {
+    "file": "offload-demo-source.webm",
+    "durationSeconds": 140.68,
+    "width": 1280,
+    "height": 800,
+    "codec": "vp9",
+    "fps": 25,
+    "bytes": 11602162,
+    "audio": false,
+    "unmodified": true
+  },
+  "captureFix": {
+    "fullPageScreenshots": 0,
+    "viewportResizes": 0,
+    "normalViewportFramesInspected": [
+      "raw-frame-sell-card.png",
+      "raw-frame-find-card.png",
+      "raw-frame-find-reload.png"
+    ],
+    "greyFieldOrTinyFullPage": "not present in inspected source frames"
+  },
+  "flows": [
+    "fresh Live Meta API session",
+    "sample Sell with source label",
+    "owner answer saved",
+    "approval saved",
+    "simulation generated one card",
+    "Sell accepted and survives reload",
+    "Find matching EUR80 offer qualified",
+    "Find accepted and survives reload"
+  ],
+  "apiResponses": 20,
+  "non200Responses": [],
+  "errors": [],
+  "reviewHolds": {
+    "imageComparisonSeconds": 3,
+    "conditionMapSeconds": 3,
+    "eachCardBeforeYesSeconds": 4,
+    "eachAcceptedReloadSeconds": 3
+  },
+  "browserClosed": true
+}

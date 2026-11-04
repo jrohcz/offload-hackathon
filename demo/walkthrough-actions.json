@@ -1,0 +1,108 @@
+{
+  "url": "https://offload-eta.vercel.app",
+  "logs": [
+    {
+      "at": "2026-11-04T15:16:17.331Z",
+      "elapsedSeconds": 2.15,
+      "action": "fresh_live_session_ready",
+      "title": "Offload — sell without the mental load"
+    },
+    {
+      "at": "2026-11-04T15:16:17.360Z",
+      "elapsedSeconds": 2.18,
+      "action": "sample_pipeline_started"
+    },
+    {
+      "at": "2026-11-04T15:17:01.499Z",
+      "elapsedSeconds": 46.32,
+      "action": "sample_pipeline_finished",
+      "mode": "real",
+      "samplePhoto": true,
+      "questions": [
+        "What is the brand and model number?",
+        "Does the turntable power on and spin?",
+        "Does the tonearm move and does audio output work?",
+        "Is the dust cover crack stable or does it affect opening/closing?"
+      ]
+    },
+    {
+      "at": "2026-11-04T15:17:01.541Z",
+      "elapsedSeconds": 46.36,
+      "action": "three_view_comparison_visible"
+    },
+    {
+      "at": "2026-11-04T15:17:04.624Z",
+      "elapsedSeconds": 49.45,
+      "action": "condition_map_visible"
+    },
+    {
+      "at": "2026-11-04T15:17:10.000Z",
+      "elapsedSeconds": 54.82,
+      "action": "owner_answer_persisted",
+      "question": "Does the turntable power on and spin?",
+      "answer": "Not tested or verified. Please describe it as unknown."
+    },
+    {
+      "at": "2026-11-04T15:17:13.419Z",
+      "elapsedSeconds": 58.24,
+      "action": "listing_approved"
+    },
+    {
+      "at": "2026-11-04T15:17:13.474Z",
+      "elapsedSeconds": 58.3,
+      "action": "live_simulation_started"
+    },
+    {
+      "at": "2026-11-04T15:17:57.858Z",
+      "elapsedSeconds": 102.68,
+      "action": "live_simulation_finished",
+      "cards": 1
+    },
+    {
+      "at": "2026-11-04T15:17:57.941Z",
+      "elapsedSeconds": 102.76,
+      "action": "sell_card_review_hold"
+    },
+    {
+      "at": "2026-11-04T15:18:04.257Z",
+      "elapsedSeconds": 109.08,
+      "action": "sell_accepted"
+    },
+    {
+      "at": "2026-11-04T15:18:06.127Z",
+      "elapsedSeconds": 110.95,
+      "action": "sell_acceptance_survived_reload"
+    },
+    {
+      "at": "2026-11-04T15:18:11.492Z",
+      "elapsedSeconds": 116.31,
+      "action": "find_qualification_started"
+    },
+    {
+      "at": "2026-11-04T15:18:22.936Z",
+      "elapsedSeconds": 127.76,
+      "action": "find_qualification_finished",
+      "offerStatus": "qualified"
+    },
+    {
+      "at": "2026-11-04T15:18:23.004Z",
+      "elapsedSeconds": 127.83,
+      "action": "find_card_review_hold"
+    },
+    {
+      "at": "2026-11-04T15:18:29.434Z",
+      "elapsedSeconds": 134.26,
+      "action": "find_accepted"
+    },
+    {
+      "at": "2026-11-04T15:18:31.785Z",
+      "elapsedSeconds": 136.61,
+      "action": "find_acceptance_survived_reload"
+    },
+    {
+      "at": "2026-11-04T15:18:34.805Z",
+      "elapsedSeconds": 139.63,
+      "action": "walkthrough_passed"
+    }
+  ]
+}

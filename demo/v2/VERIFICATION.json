@@ -1,0 +1,31 @@
+{
+  "file": "Offload-demo-v2.mp4",
+  "sha256": "42fa8bf5cefb36a583154eef68de8eb6ba43f7eec0506c5e0778575d326ab453",
+  "bytes": "13140231",
+  "duration_s": 179.467,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "loudness": {
+    "integrated_lufs": -16.1,
+    "lra_lu": 4.1,
+    "true_peak_dbfs": -1.4
+  },
+  "sourceCapture": "Live deployed app recorded 2026-11-04",
+  "sourceResolution": [
+    1280,
+    720
+  ],
+  "checks": [
+    "full video and audio decode",
+    "41 sampled visual frames, including cost card and rejection card"
+  ],
+  "reviewLimits": [
+    "sampled visual review, not continuous motion review",
+    "automated transcript check, not a listening review"
+  ],
+  "apiEstimateUsd": 0.0971,
+  "narration": "Rime Coda / Lawton, video-only narration, not an app feature"
+}

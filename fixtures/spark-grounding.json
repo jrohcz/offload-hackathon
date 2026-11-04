@@ -1,0 +1,17 @@
+{
+  "id": "resp_mock_grounding_001",
+  "object": "response",
+  "status": "completed",
+  "model": "muse-spark-1.3",
+  "output": [{
+    "id": "msg_mock_grounding_001",
+    "type": "message",
+    "role": "assistant",
+    "status": "completed",
+    "content": [{
+      "type": "output_text",
+      "text": "{\"defects\":[{\"label\":\"dust-cover crack\",\"bbox\":[540,210,820,480]}]}"
+    }]
+  }],
+  "usage": { "input_tokens": 824, "output_tokens": 46, "total_tokens": 870 }
+}

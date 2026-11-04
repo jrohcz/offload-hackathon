@@ -1,0 +1,25 @@
+{
+  "id": "resp_mock_listing_001",
+  "object": "response",
+  "status": "completed",
+  "model": "muse-spark-1.3",
+  "output": [
+    {
+      "id": "msg_mock_listing_001",
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"title\": \"Vintage Panasonic turntable\", \"category\": \"Electronics\", \"condition\": \"Good\", \"description\": \"Classic direct-drive turntable in working-looking condition. The dust cover has a visible hairline crack; test playback before sale.\", \"brand\": \"Panasonic\", \"model\": \"SL-1200\", \"facts_confirmed\": [\"A turntable is visible\", \"Panasonic branding is visible\", \"The dust cover has a crack\"], \"facts_unknown\": [\"Whether playback works\", \"Whether the stylus is included\", \"Exact model revision\"], \"questions_for_owner\": [\"Does it play records correctly?\", \"Is the stylus included and usable?\"], \"sam_concept\": \"turntable record player\"}"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 812,
+    "output_tokens": 178,
+    "total_tokens": 990
+  }
+}

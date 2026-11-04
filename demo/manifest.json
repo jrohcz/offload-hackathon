@@ -1,0 +1,63 @@
+{
+  "artifact": "Offload hackathon demo",
+  "version": "2026-11-04",
+  "publicUrl": "https://offload-eta.vercel.app",
+  "master": "demo/offload-demo.mp4",
+  "durationSeconds": 58.68,
+  "sourceDurationSeconds": 140.68,
+  "audio": false,
+  "captions": "English burned-in editorial panels",
+  "edits": "Only model waits accelerated (10x/6x); captured UI and decisions unchanged",
+  "files": [
+    {
+      "path": "demo/offload-demo.mp4",
+      "bytes": 1280981,
+      "sha256": "e8ad4484902eb824857785282c5b961f87fe0c2dbfe12865f86a8bb01fc210f4"
+    },
+    {
+      "path": "demo/offload-demo-source.webm",
+      "bytes": 11602162,
+      "sha256": "b1bd37ffa7668f4a1ae92785b0aa47dd0a29d97b4aadb9f039fde51cf17548fb"
+    },
+    {
+      "path": "demo/walkthrough-actions.json",
+      "bytes": 2885,
+      "sha256": "2ced9ab7f0acca07fd26a33b2165870e88f2dbb8b2504dbd6b18f7792fa98d6e"
+    },
+    {
+      "path": "demo/offload-demo.timeline.json",
+      "bytes": 1768,
+      "sha256": "9fe8b4c4b014997db5643a96c92da8a9ef9b6de2554e401e044630136f4bb386"
+    },
+    {
+      "path": "demo/VERIFICATION.json",
+      "bytes": 1135,
+      "sha256": "bb377a67d121b67a17806f6ecb0a6fbc5e88b0040eaceeeb58c74b6c9b067571"
+    },
+    {
+      "path": "scripts/record-demo.mjs",
+      "bytes": 9613,
+      "sha256": "67e945336a247ca6f0693d1033fd2534bb45780278ce54562c42329bdb3907fc"
+    },
+    {
+      "path": "scripts/build-demo.py",
+      "bytes": 4299,
+      "sha256": "4a7d6d5ea16a69e5afc38713f3f271912d49a2a1e235aa2e9882f5f0f36435b3"
+    },
+    {
+      "path": "demo/qa-sell-card.png",
+      "bytes": 288302,
+      "sha256": "dde82c0884b4ed4324577e55f5605e189f6a753037799692a3b452f0a246e46c"
+    },
+    {
+      "path": "demo/qa-find-accepted.png",
+      "bytes": 219355,
+      "sha256": "929e9e4ae769519c0a754d03b8d6d875a9b9cc8302433731a69b57ad87da1f8a"
+    }
+  ],
+  "nextStep": "Upload video and submission text to event portal; portal submission not performed",
+  "notApplicable": [
+    "No separate narration/audio tracks: silent captioned walkthrough",
+    "No generated creative scene layers: actual browser recording with reproducible caption script"
+  ]
+}

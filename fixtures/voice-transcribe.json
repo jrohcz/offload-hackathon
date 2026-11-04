@@ -1,0 +1,12 @@
+{
+  "sessionId": "mock-session",
+  "transcript": "It works, the lid is cracked, and pickup is Saturdays in Brno only.",
+  "audioDurationMs": 10000,
+  "turns": [{
+    "turnId": 1,
+    "startMs": 0,
+    "endMs": 10000,
+    "transcript": "It works, the lid is cracked, and pickup is Saturdays in Brno only.",
+    "speaker": "A"
+  }]
+}

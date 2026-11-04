@@ -1,0 +1,6 @@
+[
+  { "type": "response.created", "response": { "id": "resp_mock_sam_001", "model": "sam-3.1", "status": "in_progress" } },
+  { "type": "response.output_text.delta", "item_id": "msg_mock_sam_001", "output_index": 0, "content_index": 0, "delta": "<0f>0<|box;x1=80;y1=60;x2=920;y2=900;w=1000;h=1000|><|mask;x=0;y=0;data=3,4,!!!!!'N7n4t7V|>" },
+  { "type": "response.output_text.done", "item_id": "msg_mock_sam_001", "output_index": 0, "content_index": 0, "text": "<0f>0<|box;x1=80;y1=60;x2=920;y2=900;w=1000;h=1000|><|mask;x=0;y=0;data=3,4,!!!!!'N7n4t7V|>" },
+  { "type": "response.completed", "response": { "id": "resp_mock_sam_001", "model": "sam-3.1", "status": "completed", "usage": { "input_tokens": 1200, "output_tokens": 16, "total_tokens": 1216 } } }
+]

@@ -1,0 +1,10 @@
+{
+  "range": [80, 130],
+  "quick_sale": 95,
+  "currency": "EUR",
+  "sources": [{
+    "title": "Mock comparable listing",
+    "url": "https://example.com/comparable",
+    "snippet": "Comparable used turntables in similar condition."
+  }]
+}

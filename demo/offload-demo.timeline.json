@@ -1,0 +1,58 @@
+{
+  "sourceUrl": "https://offload-eta.vercel.app",
+  "sourceSha256": "b1bd37ffa7668f4a1ae92785b0aa47dd0a29d97b4aadb9f039fde51cf17548fb",
+  "outputSha256": "e8ad4484902eb824857785282c5b961f87fe0c2dbfe12865f86a8bb01fc210f4",
+  "sourceDuration": 140.68,
+  "segments": [
+    {
+      "start": 0,
+      "end": 4.18,
+      "speed": 1,
+      "caption": "Offload: one photo, an honest listing, and owner-controlled decisions."
+    },
+    {
+      "start": 4.18,
+      "end": 45.32,
+      "speed": 10,
+      "caption": "Real Meta processing. This waiting interval is shown at 10x speed."
+    },
+    {
+      "start": 45.32,
+      "end": 60.3,
+      "speed": 1,
+      "caption": "Original, cutout and hero. Visible wear stays; unknown facts go to the owner."
+    },
+    {
+      "start": 60.3,
+      "end": 101.68,
+      "speed": 10,
+      "caption": "Five simulated buyers test the live agent. This waiting interval is shown at 10x."
+    },
+    {
+      "start": 101.68,
+      "end": 111.95,
+      "speed": 1,
+      "caption": "A qualified offer becomes a Yes / No decision. Acceptance survives reload."
+    },
+    {
+      "start": 111.95,
+      "end": 118.31,
+      "speed": 1,
+      "caption": "Find: describe a need, then manually enter a seller offer. No marketplace search."
+    },
+    {
+      "start": 118.31,
+      "end": 126.76,
+      "speed": 6,
+      "caption": "Checking the item, budget, currency, condition and pickup. Waiting shown at 6x."
+    },
+    {
+      "start": 126.76,
+      "end": 139.61,
+      "speed": 1,
+      "caption": "A matching offer becomes a decision. The saved acceptance survives reload."
+    }
+  ],
+  "audio": false,
+  "notes": "Only model-wait intervals are accelerated. Captions are editorial overlays; UI is actual captured browser footage."
+}
